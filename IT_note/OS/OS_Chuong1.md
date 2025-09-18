@@ -1,4 +1,4 @@
-# Chương 1: 
+d# Chương 1: 
 ## 1. Tổng quan về hệ điều hành
 - Hệ điều hành là **chương trình** trung gian nằm giữa người sử dụng và phần cứng máy tính, giúp người dùng tương tác với các ứng dụng rồi các ứng dụng sẽ tương tác với phần cứng thông qua hệ điều hành
   + Phần cứng (hardware): Là các tài nguyên cơ bản của máy tính như CPU, bộ nhớ, thiết bị I/O (còn có Microprograming và machine language)
@@ -63,10 +63,27 @@
 ### 2.3 Cấu trúc nhập/xuất
 
 
-### 2.4 Hoạt động bên trong máy tính hiện đại
-- CPU - Thành phần phần cứng thực thi các lệnh
+## 3. Kiến trúc hệ thống máy tính
+- Hệ thống đơn bộ xử lý
+- Hệ thống đa bộ xử lý
+- Hệ thống gom cụm
+
+### Phân biệt các khái niệm
+- CPU (Central Processor Unit) - Thành phần phần cứng thực thi các lệnh
 - Processor (bộ nhớ chính) - Một con chip chứa một hoặc nhiều CPU
 - Core (lõi/nhân) - Đơn vị tính toán cơ bản của CPU
 - Multicore (đa lõi) - Nhiều lõi tính toán trên cùng một CPU
 - Multiprocessor (đa bộ xử lý) - Nhiều bộ xử lý
 
+## 3.1 Hệ thống đơn bộ xử lý
+- Chỉ có 1 bộ xử lý đa dụng và 1 lõi duy nhất
+- (Có thể kèm theo bộ xử lý riêng biệt)
+## 3.2 Hệ thống đa bộ xử lý
+- Ưu điểm
+  + Tăng cường năng suất hệ thống (Vì càng nhiều bộ xử lý thì nhanh xong việc)
+  + Kinh tế (Vì các bộ xử lý có thể dùng chung tài nguyên)
+  + Độ tin cậy cao (Vì khi 1 bộ xử lý hỏng thì công việc của nó sẽ được chia sẻ cho các bộ xử lý còn lại)
+- Phân loại:
+  + Đa xử lý bất đối xứng - Mỗi bộ xử lý thực thi công việc khác nhau
+  + Đa xử lý đối xứng - Mỗi bộ xử lý cùng thực hiện tất cả các công việc
+  

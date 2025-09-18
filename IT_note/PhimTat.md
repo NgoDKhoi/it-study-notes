@@ -1,0 +1,11 @@
+# Ghi Chú Phím Tắt
+
+| Tổ hợp phím         | Chức năng                         |
+|---------------------|-----------------------------------|
+| **Shift + Alt + F** | Format lại code  |
+| **Ctrl + Shift + X**| Mở extension trên VS Code            |
+| **Ctrl + Shift + V**| Mở Preview bookmark         |
+| **Ctrl + Shift + B**| Build file exe         |
+| **Ctrl + Shift + P**| Mở menu tổng hợp         |
+| **Ctrl + Alt + N**  | Run code                       |
+| **Ctrl + D**        | Sửa nhiều từ trùng lặp                |
