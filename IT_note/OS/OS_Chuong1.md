@@ -45,13 +45,12 @@ d# Chương 1:
   + Tốc độ truy xuất (speed)
   + Chi phí (cost)
   + Khả năng lưu trữ dữ liệu khi không có nguồn điện (volatility)
-
 ![ảnh minh họa](../../Image_repo/PhanCapLuuTru.png)
 
 #### (1) 
   + Bộ nhớ bay hơi -> bay hơi khi ko có nguồn điện -> được phân cấp là primary storage
   + Bộ nhớ không bay hơi
-
+ 
 #### (2)
   + Gồm đĩa quang và băng từ đây là loại bộ nhớ có thể lấy ra khỏi máy tính
 - Bộ nhớ chính - thiết bị lưu trữ dung lượng lớn duy nhất mà CPU truy xuất trực tiếp
@@ -78,6 +77,7 @@ d# Chương 1:
 ## 3.1 Hệ thống đơn bộ xử lý
 - Chỉ có 1 bộ xử lý đa dụng và 1 lõi duy nhất
 - (Có thể kèm theo bộ xử lý riêng biệt)
+
 ## 3.2 Hệ thống đa bộ xử lý
 - Ưu điểm
   + Tăng cường năng suất hệ thống (Vì càng nhiều bộ xử lý thì nhanh xong việc)
@@ -85,5 +85,31 @@ d# Chương 1:
   + Độ tin cậy cao (Vì khi 1 bộ xử lý hỏng thì công việc của nó sẽ được chia sẻ cho các bộ xử lý còn lại)
 - Phân loại:
   + Đa xử lý bất đối xứng - Mỗi bộ xử lý thực thi công việc khác nhau
+
   + Đa xử lý đối xứng - Mỗi bộ xử lý cùng thực hiện tất cả các công việc
-  
+  ![ảnh minh họa](../../Image_repo/DaXuLyDoiXung.png)
+  ![ảnh minh họa](../../Image_repo/NhanKep.png)
+  ![ảnh minh họa](../../Image_repo/Numa.png)
+
+  + Hệ thống gom cụm - Là một hệ thống đa bộ xử lý nhưng gồm nhiều hệ thống làm việc với nhau
+    - Thường thấy ở data center
+    - Chia sẻ không gian lưu trữ qua `SAN` (Storage-area-network, mạng lưu trữ khu vực)
+    - Cung cấp các dịch vụ có độ sẵn sàng cao
+    - Có thể theo cấu trúc đối xứng hoặc bất đối xứng:
+      + Gom cụm bất đối xứng: một máy ở chế độ
+      +
+## 4. Các thao tác trong hệ điều hành
+### 4.1 Đơn chương (Monoprograming)
+- Chỉ 1 công việc/chương trình được nạp vào bộ nhớ tại một thời điểm
+- Công việc được thi hành tuần tự
+### 4.2 Đa chương (Multiprograming)
+- Nhiều công việc được nạp vào bộ nhớ -> Một công việc được chọn và chạy bởi job scheduling
+- Khi chương trình phải chờ (chờ I/O..), hệ điều hành sẽ switch sang công việc khác
+- Trong hệ thống đa chương, một công việc đang thực thi được gọi là một `process` (tiến trình)
+- Đa chương giúp tận dụng được tgian rảnh, tăng hiệu suất CPU  
+- `Multitasking` (đa nhiệm): là khả năng nhiều process chạy trong cùng một tgian (thật ra do dùng cơ chế time-sharing để luân phiên rất nhanh nên tạo cảm giác chạy đồng thời)     
+
+
+---
+
+ `Quiz kết chương`: https://docs.google.com/forms/d/e/1FAIpQLScsQUxS8ONdwNwFmtaXdnQYXh6JCmT0Af8ZBB-r6WQWfjG4-w/viewform?usp=header
