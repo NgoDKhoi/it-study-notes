@@ -9,3 +9,5 @@
 | **Ctrl + Shift + P**| Mở menu tổng hợp         |
 | **Ctrl + Alt + N**  | Run code                       |
 | **Ctrl + D**        | Sửa nhiều từ trùng lặp                |
+| **Ctrl + `**        | Bật terminal trong vs code                |
+
