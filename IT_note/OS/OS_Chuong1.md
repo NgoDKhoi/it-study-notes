@@ -20,7 +20,7 @@
     - Chương trình ứng dụng: tất cả các chương trình không có associate với hoạt dộng hệ thống
   + Ngày nay thì có thêm 1 số hệ điều hành có chứa middleware
 - Một máy tính hiện nay là gồm CPU (1 hoặc nhiều) và device controller kết nối với nhau thông system bus để truy xuất `shared memory`
-![ảnh minh họa](../../Image_repo/Memo.png)
+![ảnh minh họa](OS_image/Memo.png)
 - Các thiết bị I/O và CPU có thể thực thi đồng thời (concurrently)
 - Mỗi device controller chịu trách nhiệm một loại thiết bị cụ thể
 - Mỗi device controller có một `buffer local` (bộ đệm cục bộ)
@@ -45,7 +45,7 @@
   + Tốc độ truy xuất (speed)
   + Chi phí (cost)
   + Khả năng lưu trữ dữ liệu khi không có nguồn điện (volatility)
-![ảnh minh họa](../../Image_repo/PhanCapLuuTru.png)
+![ảnh minh họa](OS_image/PhanCapLuuTru.png)
 
 #### (1) 
   + Bộ nhớ bay hơi -> bay hơi khi ko có nguồn điện -> được phân cấp là primary storage
@@ -88,9 +88,9 @@
 
   + `Symmetric multiprocessing` (Đa xử lý đối xứng) - Mỗi bộ xử lý cùng thực hiện tất cả các công việc  
 
-  ![ảnh minh họa](../../Image_repo/DaXuLyDoiXung.png)
-  ![ảnh minh họa](../../Image_repo/NhanKep.png)
-  ![ảnh minh họa](../../Image_repo/Numa.png)
+  ![ảnh minh họa](OS_image/DaXuLyDoiXung.png)
+  ![ảnh minh họa](OS_image/NhanKep.png)
+  ![ảnh minh họa](OS_image/Numa.png)
 
   + `Clustered Systems` (Hệ thống gom cụm) - Là một hệ thống đa bộ xử lý nhưng gồm nhiều hệ thống làm việc với nhau
     - Thường thấy ở data center
