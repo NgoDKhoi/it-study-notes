@@ -1,6 +1,4 @@
 # Ghi chú về VS Code
- 
-
 
 - Ctrl+Alt+N là một phím tắt run code nhanh qua code runner
 

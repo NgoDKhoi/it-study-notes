@@ -6,7 +6,7 @@
 | **Ctrl + Shift + X**| Mở extension trên VS Code            |
 | **Ctrl + Shift + V**| Mở Preview bookmark         |
 | **Ctrl + Shift + B**| Build file exe         |
-| **Ctrl + Shift + P**| Mở menu tổng hợp         |
+| **Ctrl + Shift + P**| Mở menu tổng hợp (CodeSnap ở đây)         |
 | **Ctrl + Alt + N**  | Run code                       |
 | **Ctrl + D**        | Sửa nhiều từ trùng lặp                |
 | **Ctrl + `**        | Bật terminal trong vs code                |
