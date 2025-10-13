@@ -8,4 +8,16 @@
 - `$bl` là 1 byte
 - Không hợp lệ là 3,5,6
 - `lea` là éo truy xuất đến ô nhớ
-- 
+- `cmpl`
+- `j`
+- Hằng số luôn ở trước
+
+- 0000 0001 + 0000 1111 =
+
+
+
+cmpl ebx, ecx
+jne .L1
+
+
+

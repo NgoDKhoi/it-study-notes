@@ -1,5 +1,7 @@
 # Window form note
 - Có thể double click vào control để tạo hàm cho control đó trong file form1.cs
+- 
+
 ## Form
 - Tên nên bắt đầu bằng `frm`
 - Một số thuộc tính quan trọng của form  
@@ -39,3 +41,24 @@ MessageBox.Show (
     MessageBoxButtons
     MessageBoxIcon
 );
+
+## Các lớp
+- `OpenFileDialog`: ofd
+  + .showDialog(): Hiển thị hộp thoại
+  + .SafeFileName.ToString(): lấy tên file
+
+- `FileStream`: fs
+  + .Name.ToString(): lấy đường dẫn của file
+  + .Length.ToString(): lấy kích thước của file
+  + .SetLenght(): thay đổi kích thước File (truyền 0 là xóa toàn bộ nội dung file)          
+
+- `StreamReader`: sr
+  + .ReadToEnd(): đọc toàn bộ nội dung file từ đầu tới cuối
+
+- `StreamWriter`: sw
+  + .Write(content): ghi dữ liệu dạng text vào file
+
+
+
+## Các hàm 
+

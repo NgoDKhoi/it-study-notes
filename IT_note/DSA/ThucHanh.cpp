@@ -4,37 +4,36 @@
 using namespace std;
 
 int main() {
-    int n, m;
-
+    int n;
+    
+    
+    // Nhap
     cin >> n;
-    vector<vector<int>> A (n, vector<int>(3));
+    vector<int> x(n);
+    vector<int> y(n);
+
     for (int i=0; i<n; i++) {
-        for (int j=0; j < 3; j++) {
-            cin >> A[i][j];
-        }
+        cin >> x[i] >> y[i];
     }
 
-    cin >> m;
-    vector<vector<int>> B (m, vector<int>(3));
-    for (int i=0; i<m; i++) {
-        for (int j=0; j < 3; j++) {
-            cin >> B[i][j];
-        }
-    }
+    // Tinh toan
+   for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            bool need_swap = false;
+            if (x[j] > x[j + 1]) need_swap = true;
+            if (x[j] == x[j + 1] && y[j] < y[j + 1]) need_swap = true;
 
-    for (int i=0; i<m; i++) {
-        for (int j=0; j<n; j++) {
-            if (B[i][0]==A[j][0] && B[i][1]==A[j][1] && B[i][2]==A[j][2]) {
-
+            if (need_swap) {
+                swap(x[j], x[j + 1]);
+                swap(y[j], y[j + 1]);
             }
         }
-
+    }
+    
+    // Xuat
+    for (int i = 0; i < n; i++) {
+        cout << x[i] << " " << y[i] << endl;
     }
 
-
-
-
-
-    
     return 0;
 }

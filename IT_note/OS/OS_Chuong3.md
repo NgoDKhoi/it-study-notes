@@ -3,7 +3,7 @@
 - `Chương trình` là thực thể `bị động`, nằm trong ổ cứng và không tiêu tốn tài nguyên
 - `Tiến trình` là thực thể `chủ động`, nằm trong RAM và tiêu tốn các tài nguyên của máy   
 - Chương trình trở thành một tiến trình khi một tập tin thực thi được nạp vào RAM 
-- Gồm:
+- Không gian địa chỉ gồm:
   + `Text section`: chứa program code
   + `Data section`: chứa biến toàn cục  
   + `Heap section`: chứa bộ nhớ cấp phát động
@@ -68,20 +68,24 @@ Thực thi tiến trình A -> Lưu trạng thái của tiến trình đang thự
 ### 5.1 Tạo tiến trình
 - Process con nhận tài nguyên từ OS hoặc process cha
 - `Hàm fork()`:
-  + Tiến trình con sao chép không gian địa chỉ của tiến trình cha -> tiến trình con:
+  + Tiến trình con sao chép không gian địa chỉ của tiến trình cha đến tiến trình con gồm:
     - Sao chép toàn bộ source code của tiến trình cha
     - Sao chép giá trị của các biến đã được tạo
     - Bắt đầu thực thi từ vị trí mà tiến trình được tạo
   + Giá trị trả về:
-    - Lớn hơn 0: biết là tiến trình cha, là pid của process con
+    - Lớn hơn 0: biết là tiến trình cha, `(là pid của tiểu trình)`
     - Bằng 0: biết là tiến trình con, không phải là pid của process con
     - Nhỏ hơn 0: hàm fork() thất bại
-- Pid là biến (đừng xem nó là process id)
+
 - `Họ hàm exec()`:
   + Nạp một tác vụ mới vào không gian địa chỉ của tiến trình gọi hàm
-  + Tiến trình thực thi tác dụng mới thay vì source code ban đầu
+  + Tiến trình `thực thi tác dụng mới` thay vì source code ban đầu, có làm chương trình rơi vào trạng thái waiting
   + Không làm thay đổi mối quan hệ của tiến trình
+  + Thực hiện thành công thì không có giá trị trả về, trả về -1 nếu có lỗi xảy ra   
   ![alt text](OS_image/image-2.png)
+
+- Pid là biến (đừng xem nó là process id)
+
 
 - (6 ready nhưng 4 lần waiting ??) -> Do khi tạo tiến trình con cũng có new -> ready -> running
 ## 6

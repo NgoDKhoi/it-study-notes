@@ -24,34 +24,35 @@ void Bubble_Sort(vector<int> &v, int n)
 
 void Selection_Sort(vector<int> &v, int n)
 {
-    int i = 0;
-    while (i < n - 1)
+    for (int i = 0; i < n - 1; i++)
     {
-        int Min = v[i];
         int ViTriMin = i;
-        for (int j = i; j < n; j++)
+        for (int j = i + 1; j < n; j++)
         {
-            if (v[j] < Min)
-            {
-                Min = v[j];
+            if (v[j] < v[ViTriMin])
                 ViTriMin = j;
-            }
         }
 
         int temp = v[i];
         v[i] = v[ViTriMin];
         v[ViTriMin] = temp;
-
-        i++;
     }
 }
 
-void Insertion_Sort(vector <int> v, int n) {
-    int k = v[0];
-
-
-
+void Insertion_Sort(vector<int> &v, int n)
+{
+    for (int i = 1; i < n; i++)
+    {
+        int temp= v[i];
+        int j= i; 
+        while (j > 0 && v[j-1] > temp) {
+            v[j]= v[j-1]; 
+            j--;
+        }
+        v[j]= temp;
+    }
 }
+
 int main()
 {
 
@@ -68,7 +69,7 @@ int main()
         v.push_back(x);
     }
 
-    Bubble_Sort(v, n);
+    Insertion_Sort(v, n);
 
     cout << "Mang da sap xep: ";
     for (int i = 0; i < n; i++)

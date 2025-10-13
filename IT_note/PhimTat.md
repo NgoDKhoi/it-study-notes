@@ -10,4 +10,5 @@
 | **Ctrl + Alt + N**  | Run code                       |
 | **Ctrl + D**        | Sửa nhiều từ trùng lặp                |
 | **Ctrl + `**        | Bật terminal trong vs code                |
-
+| **Ctrl + Z**        | Quay ngược thời gian                |
+| **Window + V**      | Truy cập bộ nhớ tạm

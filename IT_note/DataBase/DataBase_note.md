@@ -1,5 +1,4 @@
 # Ghi Chú Cơ Sở Dữ Liệu
--
 ## 1. Các khái 
 - ng dungf, quan he, qly
 ## 3. Mô hình thực thể mối kết hợp (ER)
@@ -16,6 +15,15 @@
 - Kiểu dữ liệu: số, chuỗi, time, luận lý, OLE
 - Tại một thời điểm mà attribute chưa có giá trị => null
 - Quan hệ là 1 tập hữu hạn các attribute
-- Nếu quan hệ là table thì `tuple`(bộ) giống như 1 dòng\
+- Nếu quan hệ là table thì `tuple`(bộ) giống như 1 dòng
 
-- Khóa tương đương\
+- Khóa tương đương
+
+## Chương 3
+- 
+
+
+
+Bài 2:
+Bài 3:
+

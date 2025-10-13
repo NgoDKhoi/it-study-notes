@@ -72,7 +72,6 @@ CTimeSpan CTimeSpan::operator- (const CTimeSpan &b) const { // Tru 2 khoang tgia
 	return temp;
 }
 
-
 class CTime {
 	private: 
 		int iGio, iPhut, iGiay;

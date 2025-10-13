@@ -70,41 +70,35 @@ int main()
 
 void Sort(vector<Hocsinh> &ls)
 {
-    int i, j, l, t, min;
-    i = 0;
-    while (i < ls.size() - 1)
+    bool swapped = true;
+    while (swapped)
     {
-        min = i;
-        j = i + 1;
-        while (j < ls.size())
+        swapped = false;
+        for (int i = 1; i < ls.size(); i++)
         {
-            l = ls[min].Ten.size();
-            if (ls[min].Ten.size() < ls[j].Ten.size())
+            double dtb1 = (ls[i - 1].Toan + ls[i - 1].Van + ls[i - 1].Ly + ls[i - 1].Hoa + ls[i - 1].Sinh + ls[i - 1].Anh) / 6.0;
+            double dtb2 = (ls[i].Toan + ls[i].Van + ls[i].Ly + ls[i].Hoa + ls[i].Sinh + ls[i].Anh) / 6.0;
+
+            bool need_swap = false;
+            if (dtb1 < dtb2)
+                need_swap = true;
+            else if (dtb1 == dtb2)
             {
-                l = ls[j].Ten.size();
-            }
-            t = 0;
-            while (t < l)
+                if (ls[i - 1].Nam < ls[i].Nam)
+                    need_swap = true;
+                else if (ls[i - 1].Nam == ls[i].Nam && ls[i - 1].Thang < ls[i].Thang)
+                    need_swap = true;
+                else if (ls[i - 1].Nam == ls[i].Nam && ls[i - 1].Thang == ls[i].Thang && ls[i - 1].Ngay < ls[i].Ngay)
+                    need_swap = true;
+            }   
+            if (need_swap)
             {
-                if (t == ls[j].Ten.size())
-                {
-                    min = j;
-                    break;
-                }
-                if (ls[min].Ten[t] > ls[j].Ten[t])
-                {
-                    min = j;
-                    break;
-                }
-                else if (ls[min].Ten[t] < ls[j].Ten[t])
-                {
-                    break;
-                }
-                t++;
+                Hocsinh temp= ls[i-1];
+                ls[i-1]= ls[i];
+                ls[i]= temp;
+
+                swapped = true;
             }
-            j++;
         }
-        swap(ls[i], ls[min]);
-        i++;
     }
 }
