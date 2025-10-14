@@ -1,5 +1,7 @@
 # Github note
-git clone để git
+git clone
+git reset
+git log --oneline
 ## Cách đưa repo từ vs code lên github
 git remote add origin https://github.com/NgoDKhoi/Ten_Repo.git `(Dùng để kết nối với repo trên github)`  
 git add .
