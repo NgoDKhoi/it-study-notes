@@ -1,29 +1,40 @@
 # Ghi Chú Cơ Sở Dữ Liệu
-## 1. Các khái 
-- ng dungf, quan he, qly
-## 3. Mô hình thực thể mối kết hợp (ER)
-- `Entity Type` là đối tượng
-- `Entity` là thể hiện của Entity Type
-- `Entity Attribute` là những tính chất đặc trưng của Entity Type. Các loại thuộc tính
-  + Đơn trị
-  + Đa hợp
-  + Đa trị
-- `Entity type key` là thuộc tính nhận diện của loại thực
--   
 
-## Chương 2 Mô hình quan hệ
-- Kiểu dữ liệu: số, chuỗi, time, luận lý, OLE
-- Tại một thời điểm mà attribute chưa có giá trị => null
-- Quan hệ là 1 tập hữu hạn các attribute
-- Nếu quan hệ là table thì `tuple`(bộ) giống như 1 dòng
+## Thiết cơ sở dữ liệu
+### ERD
+- `Entity` là các danh từ chính
+- `Attribute` và `Primary key`
+- `Relationship`:
+  + 1-N: "Mỗi...thuộc một...", "Mỗi...có nhiều..."
+  + N-N: "Nhiều...nhiều"
 
-- Khóa tương đương
-
-## Chương 3
-- 
+### Mô hình quan hệ
 
 
+## Đại số quan hệ
+- Phép chọn và phép chiếu
+- Phép nối tự nhiên
+- Phép nối ngoài
+- Phép toán tập hợp
+- Phép gom nhóm
+- Phép chia
 
-Bài 2:
-Bài 3:
+## SQL
+
+CREAT DATABASE <name_database>
+
+
+
+
+
+## Thực hành
+![alt text](DATABASE_image/image.png)
+
+Bảng -
+Cột -
+Dòng dữ liệu - Bộ giá trị
+
+Create TABLE <tên table> {
+    <tên columm 1><Kiểu dữ liệu>
+}
 

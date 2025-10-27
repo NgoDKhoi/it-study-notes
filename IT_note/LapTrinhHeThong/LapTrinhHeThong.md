@@ -12,12 +12,7 @@
 - `j`
 - Hằng số luôn ở trước
 
-- 0000 0001 + 0000 1111 =
 
-
-
-cmpl ebx, ecx
-jne .L1
 
 
 

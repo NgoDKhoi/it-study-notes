@@ -1,38 +1,29 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
+
+struct Point {
+    long long x,y;
+};
+
+void SapXep (int l, int r, vector <Point> &v) {
+    
+}
 
 int main() {
     int n;
-    
-    
-    // Nhap
     cin >> n;
-    vector<int> x(n);
-    vector<int> y(n);
+
+    vector <Point> ds_Diem(n);
+    for (int i=0; i<n; i++) {
+        cin >> ds_Diem[i].x >> ds_Diem[i].y;
+    }
+
+    SapXep(0,n,ds_Diem);
 
     for (int i=0; i<n; i++) {
-        cin >> x[i] >> y[i];
-    }
-
-    // Tinh toan
-   for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            bool need_swap = false;
-            if (x[j] > x[j + 1]) need_swap = true;
-            if (x[j] == x[j + 1] && y[j] < y[j + 1]) need_swap = true;
-
-            if (need_swap) {
-                swap(x[j], x[j + 1]);
-                swap(y[j], y[j + 1]);
-            }
-        }
-    }
-    
-    // Xuat
-    for (int i = 0; i < n; i++) {
-        cout << x[i] << " " << y[i] << endl;
+        cout << ds_Diem[i].x << " " << ds_Diem[i].y;
+        cout << "\n";
     }
 
     return 0;

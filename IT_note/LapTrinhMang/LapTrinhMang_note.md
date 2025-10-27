@@ -18,7 +18,7 @@
 - Tầng liên kết mạng: Ethernet, Wi-Fi, ARP
 - Tầng internet: IP (IPv4, IPv6), ICMP(ping)
 - Tầng transport:
-  + `TCP`: kết nối tin cậy, có kiểm soát (dùng cho web, gmail)
+  + `TCP`: kết nối tin cậy, có kiểm soát (dùng cho web, gmail)``
   + `UDP`: không tin cậy, nhanh (dùng cho video, game)
 - Tầng ứng dụng:
   + Web: HTTP, HTTPS
@@ -26,5 +26,11 @@
   + File: FTP, SFTP, TFTP
   + Tên miền: DNS
   + Remote login: SSH, Telnet
+
+
+## Mail Server
+- Cách cài đặt một mail server cơ bản:
+  + Hướng dẫn trong bộ cài đặt của Window Server
+  + Dùng phần mềm của bên thứ 3: `AspEmail`, `Mercury`, `Pegasus`   
 
 

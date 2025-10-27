@@ -31,6 +31,12 @@
 - `ReadOnly`: textbox chỉ đọc, không chỉnh sửa được nội dung (nếu chọn `true`)
 - `PasswordChar`: Nhập vào ký tự thay thế (ví dụ *)
 
+## Combox box
+- Tên nên bắt đầu bằng `cbo`
+- `.DataSource` = listMovie; (phải là list hoặc nha)
+- `.DisplayMember` = "movieName";
+
+
 ## Button
 - Tên nên bắt đầu bằng `btn`
 
@@ -43,7 +49,7 @@ MessageBox.Show (
 );
 
 ## Các lớp
-- `OpenFileDialog`: ofd
+- `OpenFileDialog`: ofdx1
   + .showDialog(): Hiển thị hộp thoại
   + .SafeFileName.ToString(): lấy tên file
 
@@ -58,7 +64,36 @@ MessageBox.Show (
 - `StreamWriter`: sw
   + .Write(content): ghi dữ liệu dạng text vào file
 
+#  TableLayoutPanel
+
+- SizeType là percent
+
+## Các hàm
 
 
-## Các hàm 
+## Bước 1: Xác định vấn đề 
+- Máy tính bị chạy chậm. nhiều lúc đơ máy
+
+## Bước 2: Phân tích nguyên nhân
+- Do mở nhiều task cùng lúc, chương trình chạy ngầm
+- Ổ cứng bị đầy làm cho hệ điều hành ko có đủ ko gian trống để hoạt động
+
+## BƯớc 3: Tạo giải pháp
+- Nếu đơ máy có restart máy để máy chạy được
+- Sau đó, kiểm tra ô nhớ, dung lượng máy và tiến hành xóa bớt những thứ không cần thiết
+- Bật task manager lên kiểm tra có phần mềm nào chạy ngầm không và tắt đi
+
+## Bước 4:
+- 
+
+
+
+
+
+
+
+
+
+
+
 

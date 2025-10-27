@@ -5,21 +5,7 @@ using namespace std;
 
 void Bubble_Sort(vector<int> &v, int n)
 {
-    bool swapped = true;
-    while (swapped)
-    {
-        swapped = false;
-        for (int i = 1; i < n; i++)
-        {
-            if (v[i - 1] > v[i])
-            {
-                int temp = v[i];
-                v[i] = v[i - 1];
-                v[i - 1] = temp;
-                swapped = true;
-            }
-        }
-    }
+    
 }
 
 void Selection_Sort(vector<int> &v, int n)
@@ -52,6 +38,19 @@ void Insertion_Sort(vector<int> &v, int n)
         v[j]= temp;
     }
 }
+
+void Merge_Sort(int l, int r, vector<int> &v) {
+    int m= (l+r)/2;
+
+    Merge_Sort(l, m, v);
+    Merge_Sort(m+1, r, v);
+    combine
+}
+
+void combine(int l, int m, int r, vector<int> &v) {
+    if ()
+}
+
 
 int main()
 {
