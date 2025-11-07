@@ -17,7 +17,7 @@
   + Tồn tại một chương trình luôn chạy tại tất cả thời điểm khi máy tính hoạt động được gọi là nhân/ hạt nhân (kernel)
   + Tồn tại thêm 2 loại chương trình 
     - Chương trình hệ thống: được đóng gói đi cùng với hệ điều hành nhưng không phải là 1 phần của nhân
-    - Chương trình ứng dụng: tất cả các chương trình không có associate với hoạt dộng hệ thống
+    - Chương trình ứng dụng: tất cả các chương trình không có associate với hoạt động hệ thống
   + Ngày nay thì có thêm 1 số hệ điều hành có chứa middleware
 - Một máy tính hiện nay là gồm CPU (1 hoặc nhiều) và device controller kết nối với nhau thông system bus để truy xuất `shared memory`
 ![ảnh minh họa](OS_image/Memo.png)
@@ -97,7 +97,7 @@
     - Chia sẻ không gian lưu trữ qua `SAN` (Storage-area-network, mạng lưu trữ khu vực)
     - Cung cấp các dịch vụ có độ sẵn sàng cao
     - Có thể theo cấu trúc đối xứng hoặc bất đối xứng:
-      + `Asymmetric clustering` (Gom cụm bất đối xứng): một máy ở chế độ hot-standby, các máy còn lại run ứng dụng
+      + `Asymmetric clustering` (Gom cụm bất đối xứng): một máy ở chế độ hot-standby, các máy còn lại chạy ứng dụng
       + `Symmetric clustering` (Gom cụm đối xứng): nhiều node chạy ứng dụng và giám sát các nút còn lại 
 ## 4. Các thao tác trong hệ điều hành
 ### 4.1 Đơn chương (Monoprograming)

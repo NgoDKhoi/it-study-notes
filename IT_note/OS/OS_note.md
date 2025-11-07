@@ -49,3 +49,4 @@ sudo service ssh start
   + Nối lệnh với lệnh
   + Nối file với lệnh1
 
+- Tiến trình orphan là tiến trình mà tiến trình cha bị khử trước tiến trình con và lúc này tiến trình init sẽ trở thành PPID mới    

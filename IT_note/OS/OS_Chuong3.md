@@ -23,13 +23,13 @@
 ## 3. Process Control Block
 - Mỗi tiến trình đều được cấp 1 PCB
 - PCB gồm: 
-  + Trạng thái tiến trình (Process state)
-  + Bộ đếm chương trình (Program counter)
-  + Các thanh ghi (Registers)
-  + Thông tin lập thời biểu CPU: độ ưu tiên, ...
-  + Thông tin quản lý bộ nhớ
-  + Thông tin lượng CPU, thời gian sử dụng
-  + Thông tin trạng thái I/O
+  + Trạng thái tiến trình (`Process state`)
+  + Bộ đếm chương trình (`Program counter`)
+  + Các thanh ghi (`Registers`)
+  + Thông tin lập thời biểu CPU 
+  + Thông tin quản lý bộ nhớ (`memory limits`)
+  + Thông tin lượng CPU, thời gian sử dụng 
+  + Thông tin trạng thái I/O (`list of open files`)
 
 ## 4. Định thời tiến trình
 - Yêu cầu hệ của điều hành về quản lý tiến trình:
@@ -55,8 +55,8 @@
   + `Job scheduler` hay `Long-term scheduler` ( quyết định process sẽ được nạp vào bộ nhớ chính) (cũng quyết định degree of multiprogramming)
   + `CPU scheduler` hay `Short-term scheduler` ( quyết định process nào được nhận CPU và thực thi)
   + `Medium-term scheduler` (điều chỉnh degree of multiprogramming) (có thể một số OS có cái này)
-    - Chuyển process từ bộ nhớ sang đĩa (swap out)
-    - Chuyển process từ đĩa sang bộ nhớ (swap in)
+    - Chuyển process từ bộ nhớ sang đĩa (`swap out`)
+    - Chuyển process từ đĩa sang bộ nhớ (`swap in`)
 - `Context Switch`:  
 Thực thi tiến trình A -> Lưu trạng thái của tiến trình đang thực thi vào PCB(A) -> Nạp trạng thái của tiến trình chuẩn bị thực thi từ PCB(B) -> Thực thi tiến trình B
 
@@ -88,12 +88,14 @@ Thực thi tiến trình A -> Lưu trạng thái của tiến trình đang thự
 
 
 - (6 ready nhưng 4 lần waiting ??) -> Do khi tạo tiến trình con cũng có new -> ready -> running
-## 6
+## 6 Cộng tác giữa các tiến trình
+- Mục đích:
+  + `Information sharing` (chia sẻ dữ liệu)
+  + `computational speedup` (tăng tốc tính toán)
+  + Thực hiện công việc chung
 ## 7. Tiểu trình
 -
 
-
-## A
 - Địa chỉ ảo -> tạo ra trường hợp song song
 
 - CÓ tất cả bao nhiêu tinees trình 
