@@ -5,6 +5,36 @@
 - `git branch -d DKhoi`: Xóa nhánh DKhoi ở trên mấy bạn
 
 
+Nhóm trưởng: tạo repo
+
+Thành viên:
+git clone https://github.com/toannv-uit/Snake.git
+- thay đổi code
+git add .
+git commit -m "Content"
+git push
+
+
+
+- Mỗi lần làm việc
+git pull
+git checkout -b DKhoi
+- thay đổi code
+git add .
+git commit -m "Content"
+git push -u origin DKhoi
+
+
+
+
+
+
+
+
+
+
+
+
 
 git reset  
 git log --oneline  
@@ -12,7 +42,7 @@ git log --oneline
 # Cách sử dụng
 - Bước 1: Tải code về và cập nhật code mới nhất  
 `git clone https://github.com/NgoDKhoi/Meo_Boom.git`  
-`git checkout main`  
+`git checkout main` 
 `git pull origin main`  
 
 - Bước 2: Tạo nhánh mới và làm việc  
