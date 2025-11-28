@@ -93,6 +93,7 @@ Thực thi tiến trình A -> Lưu trạng thái của tiến trình đang thự
   + `Information sharing` (chia sẻ dữ liệu)
   + `computational speedup` (tăng tốc tính toán)
   + Thực hiện công việc chung
+  
 ## 7. Tiểu trình
 -
 
