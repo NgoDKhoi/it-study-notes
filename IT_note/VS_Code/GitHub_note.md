@@ -1,7 +1,7 @@
 # Git note
 - `git checkout <tên nhánh>`: di chuyển tới nhánh  
 - `git checkout -b DKhoi`: tạo nhánh DKhoi và di chuyển tới nó
-- `git pull origin main`: cập nhật nhánh `main`, kéo phiên bản mới nhất của nhánh `main` từ github về máy
+- : cập nhật nhánh `main`, kéo phiên bản mới nhất của nhánh `main` từ github về máy
 - `git branch -d DKhoi`: Xóa nhánh DKhoi ở trên mấy bạn
 
 

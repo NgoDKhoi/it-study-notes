@@ -7,7 +7,26 @@
 - Selection Sort
 - Insertion Sort
 
-## Heap Sort
-- Left: 2i + 1
-- Right: 2i + 2
-- Cha: (i-1)/2
+
+## Graph
+- Đồ thị vô hướng
+- Đồ thị có hướng
+- Đồ thị có trọng số
+- Đồ thị con
+- Các dạng đồ thị khác:
+  + Đồ thị rỗng
+  + Đơn đồ thị
+  + Đa đồ thị
+  + Đồ thị đầy đủ
+  + Đồ thị
+
+## Tham chiếu và con trỏ
+```C++
+int& ref = x // Tạo biến ref tham chiếu tới x
+int* a // Tạo biến con trỏ a (nên địa chỉ cho con trỏ để tránh nó trỏ tới địa chỉ rác làm lỗi runtime)
+a = &x // Lấy địa chỉ của x gán cho a
+*x = 5; 
+
+cout << a << x << >
+```
+

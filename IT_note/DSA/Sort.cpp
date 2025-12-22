@@ -44,14 +44,48 @@ void Merge_Sort(int l, int r, vector<int> &v) {
 
     Merge_Sort(l, m, v);
     Merge_Sort(m+1, r, v);
-    combine
+    combine(l, m, r, v);
 }
-
+/*
+    7 12 8 15 3
+    0 1  2  3 4 
+*/
 void combine(int l, int m, int r, vector<int> &v) {
-    if ()
+    int n1= m - l + 1;
+    int n2= r - m;
+
+    vector<int> L(n1);
+    vector<int> R(n2);
+
+    for (int i = 0; i < n1; i++) {
+        L[i] = v[l + i];
+    }
+    for (int j = 0; j < n2; j++) {
+        R[j] = v[m + 1 + j];
+    }
+
+    int i = 0;       // Chỉ số cho mảng L
+    int j = 0;       // Chỉ số cho mảng R
+    int k = l;       // Chỉ số cho mảng gốc v
+
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            v[k] = L[i];
+            i++;
+        } else {
+            v[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        v[k] = L[i];
+        i++;
+        k++;
+    }
+
 }
-
-
 int main()
 {
 

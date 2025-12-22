@@ -1,30 +1,25 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<vector>
+#include<utility>
 using namespace std;
-
-struct Point {
-    long long x,y;
-};
-
-void SapXep (int l, int r, vector <Point> &v) {
-    
+int countSimpleVertex(vector<vector<int>>graph){
+    int n=graph.size();
+    int cnt=0;
+    for(int i=0;i<n;i++){
+        if(!graph[i].size())  cnt++;
+    }
+    return cnt;
 }
-
-int main() {
-    int n;
-    cin >> n;
-
-    vector <Point> ds_Diem(n);
-    for (int i=0; i<n; i++) {
-        cin >> ds_Diem[i].x >> ds_Diem[i].y;
+int main(){
+    int m,n;
+    cin>>m>>n;
+    vector<vector<int > > graph(m);
+    while(n){
+        int u,v;
+        cin>>u>>v;
+        graph[u].push_back(v);
+        graph[v].push_back(u);
+        --n;
     }
-
-    SapXep(0,n,ds_Diem);
-
-    for (int i=0; i<n; i++) {
-        cout << ds_Diem[i].x << " " << ds_Diem[i].y;
-        cout << "\n";
-    }
-
-    return 0;
+    cout<<countSimpleVertex(graph);
 }
