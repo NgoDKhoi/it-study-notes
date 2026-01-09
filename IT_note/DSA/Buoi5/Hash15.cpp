@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 
@@ -37,7 +36,7 @@ struct Hashtable {
 
 void CreateHashtable(Hashtable &, int);
 int Hash(Hashtable, int); // Ham bam ma so hoc sinh thanh chi so
-Node * Search(Hashtable , int);
+int Delete(Hashtable &, int);
 void PrintHashtable(Hashtable);
 void DeleteHashtable(Hashtable &);
 
@@ -68,15 +67,11 @@ int main()
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> k;
-        Node * p = Search(hashtable, k);
 
-        if (p == NULL)
-            cout << "KHONG TIM THAY\n";
-        else {
-            hs = p->data;
-            cout << '[' << hs.Maso << ",  " << hs.Hoten << "  , " << hs.Gioitinh << ", " << hs.Namsinh << ", " << hs.TBK << "]\n";
-        }
+        if (Delete(hashtable, k) == 0)
+            cout << "KHONG XOA DUOC\n";
     }
+    PrintHashtable(hashtable);
     DeleteHashtable(hashtable);
     return 0;
 }
@@ -88,7 +83,7 @@ Node * CreateNode(Hocsinh x) {
     Node *p = new Node;
     if (p == NULL)
         exit(1);
-    p->next = NULL; 
+    p->next = NULL;
     p->data = x;
     return p;
 }
@@ -110,7 +105,7 @@ int RemoveHead(List &l) {
     l.head = p->next;
     if (l.tail == p)
         l.tail = NULL;
-	delete p;
+    delete p;
     return 1;
 }
 
@@ -171,7 +166,28 @@ void DeleteHashtable(Hashtable &ht) {
     ht.M = 0;
 }
 
-Node * Search(Hashtable ht, int maso) {
-    
+int Delete(Hashtable &ht, int maso) {
+    int i = Hash(ht, maso);
 
-}
+    Node *p = ht.table[i].head;
+    Node *prev = NULL;
+
+    while (p != NULL) {
+        if (p->data.Maso == maso) {
+            
+            if (prev == NULL) {
+                RemoveHead(ht.table[i]);
+            } else {
+                RemoveAfter(ht.table[i], prev);
+            }
+
+            ht.n--; 
+            return 1;
+        }
+
+        prev = p;
+        p = p->next;
+    }
+
+    return 0;
+}   

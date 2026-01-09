@@ -44,7 +44,7 @@ int is16x(int x)
 {
     int t = x & 15; // AND với 15 để lấy 4 bit cuối
     return !t;
-}
+} 
 
 int isPositive(int x)
 {

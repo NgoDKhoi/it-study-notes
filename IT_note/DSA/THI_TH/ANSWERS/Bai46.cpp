@@ -37,46 +37,32 @@ struct Hashtable {
 
 void CreateHashtable(Hashtable &, int);
 int Hash(Hashtable, int); // Ham bam ma so hoc sinh thanh chi so
-Node * Search(Hashtable , int);
+int Insert(Hashtable &, Hocsinh);
 void PrintHashtable(Hashtable);
 void DeleteHashtable(Hashtable &);
 
 void Input(Hocsinh &x) {
     cin >> x.Maso;
     getline(cin>>ws, x.Hoten);
-    cin >> x.Gioitinh;
     cin >> x.Namsinh;
+    cin >> x.Gioitinh;
     cin >> x.TBK;
 }
 int main()
 {
     Hashtable hashtable;
 
-    int m, n, k;
+    int m, n;
     Hocsinh hs;
 
     cin >> m;
     CreateHashtable(hashtable, m);
-    for (int i = 0; i < m; i++) {
-        cin >> k;
-        hashtable.n += k;
-        for (int j = 0; j < k; j++) {
-            Input(hs);
-            AddTail(hashtable.table[i], hs);
-        }
-    }
     cin >> n;
     for (int i = 0; i < n; i++) {
-        cin >> k;
-        Node * p = Search(hashtable, k);
-
-        if (p == NULL)
-            cout << "KHONG TIM THAY\n";
-        else {
-            hs = p->data;
-            cout << '[' << hs.Maso << ",  " << hs.Hoten << "  , " << hs.Gioitinh << ", " << hs.Namsinh << ", " << hs.TBK << "]\n";
-        }
+        Input(hs);
+        Insert(hashtable, hs);
     }
+    PrintHashtable(hashtable);
     DeleteHashtable(hashtable);
     return 0;
 }
@@ -88,7 +74,7 @@ Node * CreateNode(Hocsinh x) {
     Node *p = new Node;
     if (p == NULL)
         exit(1);
-    p->next = NULL; 
+    p->next = NULL;
     p->data = x;
     return p;
 }
@@ -171,7 +157,22 @@ void DeleteHashtable(Hashtable &ht) {
     ht.M = 0;
 }
 
-Node * Search(Hashtable ht, int maso) {
-    
+int Insert(Hashtable &ht, Hocsinh x) {
+    // Code
+    if ((double)(ht.n + 1) / ht.M >= LOAD) return 0;
+
+    int h = x.Maso % ht.M;
+
+    Node* p = ht.table[h].head;
+    while (p != NULL) {
+        if (p->data.Maso == x.Maso)
+            return 0;
+
+        p = p->next;
+    }
+
+    AddTail(ht.table[h], x);
+    ++ht.n;
+return 1;
 
 }

@@ -90,6 +90,25 @@ void DeleteHashtable(Hashtable &ht) {
 }
 
 int Delete(Hashtable &ht, int maso, int &nprob) {
+    // Code
+    int h, i;
 
+    nprob = 0;
+    h = maso % ht.M;
+    i = 1;
+    while (ht.table[h].Maso != maso && ht.table[h].Maso != EMPTY) {
+        ++nprob;
+        h = (maso % ht.M + i * i) % ht.M;
+        ++i;
 
+        if (i > ht.M)
+            return 0;
+    }
+
+    if (ht.table[h].Maso == maso) {
+        ht.table[h].Maso = DELETE;
+        return 1;
+    }
+
+    return 0;
 }

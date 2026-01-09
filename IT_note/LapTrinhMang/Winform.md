@@ -1,5 +1,5 @@
 # Window form note
-- Có thể double click vào control để tạo hàm cho control đó trong file form1.cs
+- Namespace chứa nhiều lớp và trong lớp có các hàm  
 - 
 
 ## Form

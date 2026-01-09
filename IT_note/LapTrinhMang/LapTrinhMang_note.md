@@ -18,7 +18,7 @@
 - Tầng liên kết mạng: Ethernet, Wi-Fi, ARP
 - Tầng internet: IP (IPv4, IPv6), ICMP(ping)
 - Tầng transport:
-  + `TCP`: kết nối tin cậy, có kiểm soát (dùng cho web, gmail)``
+  + `TCP`: kết nối tin cậy, có kiểm soát (dùng cho web, gmail)
   + `UDP`: không tin cậy, nhanh (dùng cho video, game)
 - Tầng ứng dụng:
   + Web: HTTP, HTTPS

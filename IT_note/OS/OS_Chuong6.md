@@ -1,6 +1,9 @@
 # Chương 6
-
-
+- Điều kiện cần để xảy ra deadlock:
+  + `Mutual Exclusion` (Loại trừ tương hỗ): ít nhất 1 tài nguyên được giứ the nonsharable mode
+  + `Hold and wait`: một tiến trình giữ một tài nguyên và dợi thêm tài nguyên khác do tiến trình khác giữ
+  + `No preemption`: không trưng dụng tài nguyên
+  + `Circular Wait` (chu trình đợi): tồn tại một tập các tiến trình đang đợi sao cho.....
 
 ## Đồ thị wait for
 - Có 1 loại đỉnh: đỉnh tiến trình
@@ -30,4 +33,6 @@
   + Kết luận hệ thống ở trạng thái không an toàn
 
 # Giải thuật yêu cầu tài nguyên cho tiến trình P1
+
+
 

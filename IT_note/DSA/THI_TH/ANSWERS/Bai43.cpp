@@ -88,7 +88,7 @@ Node * CreateNode(Hocsinh x) {
     Node *p = new Node;
     if (p == NULL)
         exit(1);
-    p->next = NULL; 
+    p->next = NULL;
     p->data = x;
     return p;
 }
@@ -172,6 +172,18 @@ void DeleteHashtable(Hashtable &ht) {
 }
 
 Node * Search(Hashtable ht, int maso) {
-    
+    // Code
+    int h = maso % ht.M;
+
+    Node* p = ht.table[h].head;
+    while (p != NULL) {
+        if (p->data.Maso == maso) {
+            return p;
+        }
+
+        p = p->next;
+    }
+
+    return NULL;
 
 }

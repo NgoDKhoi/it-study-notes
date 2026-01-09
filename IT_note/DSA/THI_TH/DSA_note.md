@@ -30,3 +30,5 @@ a = &x // Lấy địa chỉ của x gán cho a
 cout << a << x << >
 ```
 
+## Note
+select, insert, 

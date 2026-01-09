@@ -15,7 +15,6 @@ Tgin = stack time - rai voằ at ifme
 # Giải thuật độ ưu tiên đọc quyền
 - Chạy hết P1, trong quá trình đó có những tiến trình được nạp vào sẽ tiến hành so sánh cái nào có priority cao hơn
 # Cách tính thời gian
-- time hoàn thành = mốc tgian hoàn thành - Arrival time
-=> Time hoàn thành trung bình= (tổng time hoàn thành) / n
-- time đợi = time hoàn thành - burst time
-- time đáp ứng = mốc tgian bắt đầu - Arrival time   
+- time đáp ứng (RT) = mốc tgian bắt đầu - Arrival time   
+- time hoàn thành (TaT) = mốc tgian hoàn thành - Arrival time
+- time đợi (WT) = time hoàn thành - burst time
