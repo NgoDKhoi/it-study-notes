@@ -31,7 +31,7 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    vector<int> v;
+    vector<int> v(N);
     for(int i=0; i<N; i++) {
         cin >> v[i];
     }
@@ -40,7 +40,7 @@ int main() {
     int x;
     for(int i=0; i<Q; i++) {
         cin >> x;
-        
+        cout << UpperBound(x, v) << "\n";
     }
 
     return 0;
